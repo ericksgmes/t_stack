@@ -15,3 +15,9 @@ void push(t_stack *stack, int value)
     stack->items[stack->top_index+1] = value;
     stack->top_index++;
 }
+
+void pop(t_stack *stack, int poppedValue)
+{
+    poppedValue = stack->items[stack->top_index];
+    stack->items--;
+}
