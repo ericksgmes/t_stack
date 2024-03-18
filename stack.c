@@ -21,3 +21,8 @@ void pop(t_stack *stack, int poppedValue)
     poppedValue = stack->items[stack->top_index];
     stack->items--;
 }
+
+void top(t_stack *stack, int topValue)
+{
+    topValue = stack->items[stack->top_index];
+}
