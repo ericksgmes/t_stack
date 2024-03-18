@@ -45,6 +45,9 @@ void clear(t_stack *stack)
     stack->top_index = -1;
 }
 
-void print(t_stack *stack) {
-
+void print(t_stack *stack) 
+{
+    for (int i = 0; i <= stack->top_index; i++) {
+        printf("%d", stack->items[i]);
+    }
 }
