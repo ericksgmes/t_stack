@@ -30,5 +30,6 @@ int main() {
         printf("lista nao esta vazia\n");
     }
     print(stack);
+    destroyStack(stack);
     return 0;
 }

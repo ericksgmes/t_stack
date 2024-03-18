@@ -63,3 +63,9 @@ int size(t_stack *stack)
 {
     return stack->top_index+1;
 }
+
+void destroyStack(t_stack *stack)
+{
+    free(stack->items);
+    free(stack);
+}

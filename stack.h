@@ -17,5 +17,6 @@ int is_empty(t_stack *stack);
 void clear(t_stack *stack);
 void print(t_stack *stack);
 int size(t_stack *stack);
+void destroyStack(t_stack *stack);
 
 #endif
