@@ -12,6 +12,7 @@ void createStack(int maxStackSize)
 
 void push(t_stack *stack, int value) 
 {
+    if (stack->top_index == stack->maxSize) printf("pilha cheia"); return;
     stack->items[stack->top_index+1] = value;
     stack->top_index++;
 }
@@ -42,4 +43,8 @@ int is_empty(t_stack *stack)
 void clear(t_stack *stack)
 {
     stack->top_index = -1;
+}
+
+void print(t_stack *stack) {
+
 }
