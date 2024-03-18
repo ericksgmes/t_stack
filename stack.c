@@ -26,3 +26,9 @@ void top(t_stack *stack, int topValue)
 {
     topValue = stack->items[stack->top_index];
 }
+
+int is_full(t_stack *stack)
+{
+    if (stack->top_index > -1) return 1;
+    return 0;
+}
