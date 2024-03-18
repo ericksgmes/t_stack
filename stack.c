@@ -13,26 +13,32 @@ t_stack * createStack(int maxStackSize)
 
 void push(t_stack *stack, int value) 
 {
-    
+    if(is_full(stack) == 1) {
+        printf("lista cheia!!");
+        return;
+    }
     stack->items[stack->top_index+1] = value;
     stack->top_index++;
 }
 
-void pop(t_stack *stack, int poppedValue)
+void pop(t_stack *stack, int *poppedValue)
 {
-    poppedValue = stack->items[stack->top_index];
-    stack->items--;
+    *poppedValue = stack->items[stack->top_index];
+    stack->top_index--;
 }
 
-void top(t_stack *stack, int topValue)
+void top(t_stack *stack, int *topValue)
 {
-    topValue = stack->items[stack->top_index];
+    *topValue = stack->items[stack->top_index];
 }
 
 int is_full(t_stack *stack)
 {
-    if (stack->top_index > -1) return 1;
-    return 0;
+    if (stack->top_index == stack->maxSize-1) {
+        return 1;
+    } else {
+        return 0;
+    }
 }
 
 int is_empty(t_stack *stack)
@@ -49,11 +55,11 @@ void clear(t_stack *stack)
 void print(t_stack *stack) 
 {
     for (int i = 0; i <= stack->top_index; i++) {
-        printf("%d", stack->items[i]);
+        printf("%d\n", stack->items[i]);
     }
 }
 
 int size(t_stack *stack)
 {
-    return stack->top_index;
+    return stack->top_index+1;
 }
