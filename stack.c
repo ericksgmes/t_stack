@@ -51,3 +51,8 @@ void print(t_stack *stack)
         printf("%d", stack->items[i]);
     }
 }
+
+int size(t_stack *stack)
+{
+    return stack->top_index;
+}
