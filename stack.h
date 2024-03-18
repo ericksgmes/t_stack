@@ -8,7 +8,7 @@ typedef struct
     int * items;
 } t_stack;
 
-void createStack(int maxStackSize);
+t_stack * createStack(int maxStackSize);
 void push(t_stack *stack, int value);
 void pop(t_stack *stack, int poppedValue);
 void top(t_stack *stack, int topValue);
