@@ -9,3 +9,9 @@ void createStack(int maxStackSize)
     stack->top_index = -1;
     stack->items = malloc(sizeof(int) * maxStackSize);
 }
+
+void push(t_stack *stack, int value) 
+{
+    stack->items[stack->top_index+1] = value;
+    stack->top_index++;
+}
