@@ -32,3 +32,9 @@ int is_full(t_stack *stack)
     if (stack->top_index > -1) return 1;
     return 0;
 }
+
+int is_empty(t_stack *stack)
+{
+    if (stack->top_index < 0) return 1;
+    return 0;
+}
